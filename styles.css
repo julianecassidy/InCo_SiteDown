@@ -1,0 +1,84 @@
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2rem;
+  margin: 4% 2rem;
+  font-family: 'new-science-serif', sans-serif;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+}
+
+.left {
+  width: 100%
+}
+
+.right {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+.Rainbow-bar {
+  margin-top: 2rem;
+  height: 2px;
+  width: 250px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, red 0%, yellow 15%, lime 30%, cyan 50%, blue 65%, magenta 80%, red 100%);
+  background-size: 200% 200%;
+  animation: horizontalScroll 5s linear infinite;
+  filter: blur(.7px);
+}
+
+
+@keyframes horizontalScroll {
+  0% {
+      background-position: 0% 0%
+  }
+
+  100% {
+      background-position: 200% 0%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  main {
+    margin: 4% 2rem;
+  }
+
+  .left {
+    width: 55%
+  }
+
+  .right {
+    width: 30%;
+  }
+
+  .Rainbow-bar {
+    margin-top: 0rem;
+    height: 250px;
+    width: 2px;
+    border-radius: 3px;
+    background: linear-gradient(0deg, red 0%, yellow 15%, lime 30%, cyan 50%, blue 65%, magenta 80%, red 100%);
+    background-size: 200% 200%;
+    animation: verticalScroll 5s linear infinite;
+    filter: blur(.7px);
+  }
+
+
+  @keyframes verticalScroll {
+    0% {
+        background-position: 0% 200%
+    }
+
+    100% {
+        background-position: 0% -200%;
+    }
+  }
+}
